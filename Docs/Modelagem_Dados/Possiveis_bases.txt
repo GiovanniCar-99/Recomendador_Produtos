@@ -1,0 +1,87 @@
+* Opção 1 - https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+* Opção 2 - https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis
+* Opção 3 - https://www.kaggle.com/datasets/surajjha101/bigbasket-entire-product-list-28k-datapoints
+* Opção 4 - https://www.kaggle.com/datasets/jacksondivakarr/online-shopping-dataset
+* Opção 5 - https://www.kaggle.com/datasets/karkavelrajaj/amazon-sales-dataset
+
+
+
+
+
+Temos as seguintes opções:
+
+1 - Conjunto de datasets que englobam principais aspectos de um ecommerce sendo eles:
+ 
+ * Base de clientes, contendo o local do cliente
+ * Base de locais, com lat e long dos mesmos
+ * Base dos itens dos pedidos, contendo a info de quais produtos, preço e frete
+ * Base de pagamentos
+ * Base das reviews dos pedidos
+ * Base das das datas dos pedidos
+ * Base dos produtos, contendo a categoria, quantos caracteres tem a descrição, quantas fotos disponíveis e dimensões
+ * Base dos fornecedores
+ * Base para tradução das categorias dos produtos (pois está tudo em portugues)
+
+PROS: 
+Esta opção já nos fornece um ambiente realista de um ecommerce, com muitas informações e um modelo de dados relacional 100% pronto, que podemos replicar no GCP;
+A base de produtos é bem variada, com apenas uma variável categórica e o resto numérica, o que facilita a modelagem;
+Podemos criar um BI bem completo contendo indicadores que vão além do "recomendador de pedidos";
+Ao ter acesso à base de pedidos, podemos também colocar como input do modelo produtos que são comprados juntos, na mesma região, etc;
+
+CONTRAS: 
+Mais complexa, o que faz com que tenhamos muito mais trabalho e possibilidades do que uma base simples de produtos;
+Podemos perder o foco principal do projeto pelo ambiente de dados oferecer muitas opções;
+Como são exemplos reais e não criados, a análise se torna mais complexa;
+
+2 - Conjunto de dados de pedidos de lojas. Contém dados do pedido em uma unica base, focado no pedido em si.
+
+PROS: 
+Muito simples e contém uma base de dados de descrição de cada variável;
+CONTRAS: 
+Não temos uma base de produtos, apenas das categorias que eles pertencem;
+Talvez não seja suficiente para criar um algorítimo de recomendação;
+
+3 - Conjunto de dados de uma rede de hortifruti e afins da India. Totalmente focada nos produtos disponíveis;
+
+PROS: 
+Extremamente simples em todos os aspectos, todas as variáveis são de simples entendimento e se relacionam diretamente ao produto;
+Bem variada em questão de tipos de produtos, as variáveis numéricas são ou lognormais ou normalizadas, bem didático;
+Não exige a contrução de um modelo relacional de entidades;
+
+CONTRAS: 
+Não temos um dataset de pedidos dos clientes, o que nos limita a fazer a recomendação apenas sobre o que temos dos produtos;
+
+4 - Base genérica de um ecommerce. Apenas uma base de pedidos.
+
+PROS: 
+Simples, misturando infos de pedidos, clientes e produtos;
+Bem documentada e com bastante variáveis a serem exploradas;
+Oferece uma gama maior de possibilidades para o acompanhamento de indicadores na construção de um BI
+
+CONTRAS:
+Não temos muitas informações dos produtos em si, apenas categoria, preço e quantidade comprada;
+
+5 - Dataset dos produtos da Amazon com os ratings e os reviews dos clientes. O próprio provedor da base recomenda ela para estudo de algorítimos de recomendação;
+
+PROS: 
+Recomendada para o caso de estudo que estamos realizando;
+Bem completa quanto às informações do produto;
+Variáveis de simples entendimento;
+
+CONTRAS:
+Maioria das variáveis são categoricas ou apenas texto, dificultando o tratamento dos dados;
+A base não é totalmente limpa, então iriamos precisar de uma etapa de pré processamento bem robusta;
+
+Ranking final: 
+1º Empatados opção 1 e 3
+2º Opção 4
+3º Opção 5 
+4º Opção 2
+
+
+
+
+
+
+
+
